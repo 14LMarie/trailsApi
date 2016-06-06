@@ -1,5 +1,6 @@
 //onscroll hero image and header to decrease in size
 //onclick of discover button movement to search section
+//on
 //onclick of search get info from api and display in html template
 //onclick of one trail show details and get map info/photo info/weater info
 //functionality of get directions button
