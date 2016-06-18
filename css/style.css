@@ -35,24 +35,23 @@ header {
 }
 
 .header-text {
-    margin-top: 9rem;
+    margin-top: 10rem;
 }
 
 header h1 {
     font-family: 'Yellowtail', cursive;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #16393B;
 }
 
 header .callToActionButton,
-header .instruction-container
- {
-    background-color:rgba(88,118,120,0.5);
+header .instruction-container {
+    background-color: rgba(88, 118, 120, 0.5);
 }
 
 .instruction-container {
     width: 75%;
-    margin-top: 11rem;
+    margin-top: 9.5rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -70,11 +69,10 @@ header p {
     font-size: 2rem;
     color: white;
     padding: 0 2.4rem;
-    margin-top: 1rem;
 }
 
-.callToActionButton:hover{
-    background-color:rgba(88,118,120,0.8);
+.callToActionButton:hover {
+    background-color: rgba(88, 118, 120, 0.8);
 }
 
 
@@ -111,6 +109,14 @@ button.search {
     padding: 0.5rem 1rem;
     background-color: #16393B;
     color: white;
+}
+
+.results {
+    border: 1px solid black;
+}
+
+.angular-google-map-container {
+    height: 400px;
 }
 
 
