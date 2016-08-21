@@ -38,14 +38,14 @@
             <p>Name: {{trail.name}}</p>
             <p>Activity Type: {{trail.activities[0].activity_type_name}}</p>
             <p>Location: {{trail.city}}, {{trail.state}}</p>
-            <p>Distance from current location</p>
+            <p>{{trail.lat}}, {{trail.lon}}</p>
         </div>
         <button>Reset</button>
     </section>
-    <section class="trail-details" ng-controller="geolocCtrl">
+    <section class="trail-details">
         <div>
             <div id="details"></div>
-            <div id="map" ng-controller="mapCtrl">
+            <div class="angular-google-map-container" ng-controller="mapCtrl">
                 <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
             </div>
             <div id="weather"></div>
@@ -55,7 +55,8 @@
         <button class="details-button">My Favorites</button>
     </section>
     <footer></footer>
-    <script src='http://maps.google.cn/maps/api/js?key=AIzaSyD7buZcMEjcjwpMa8qztndpYmCxxP-Te2A'></script>
+    <!-- Regular Javascript Google Maps script
+    <script src='http://maps.google.cn/maps/api/js?key=AIzaSyD7buZcMEjcjwpMa8qztndpYmCxxP-Te2A'></script> -->
 
     <script src="https://cdn.jsdelivr.net/lodash/4.13.1/lodash.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" type="text/javascript"></script>

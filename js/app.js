@@ -17,10 +17,11 @@
 
 
 angular.module('myApp', ['ngGeolocation', 'uiGmapgoogle-maps'])
+    //Google Maps SDK Async Loader
     .config(function (uiGmapGoogleMapApiProvider) {
         uiGmapGoogleMapApiProvider.configure({
             key: 'AIzaSyD7buZcMEjcjwpMa8qztndpYmCxxP-Te2A',
-            v: '3.20', //defaults to latest 3.X anyhow
+            v: '3.24', //defaults to latest 3.X anyhow
             libraries: 'weather,geometry,visualization'
         });
     })
@@ -65,6 +66,7 @@ angular.module('myApp', ['ngGeolocation', 'uiGmapgoogle-maps'])
 
 
 // providing current location of user
+
 .controller('geolocCtrl', ['$geolocation', '$scope', function ($geolocation, $scope) {
     $geolocation.watchPosition({
         timeout: 60000
@@ -77,17 +79,18 @@ angular.module('myApp', ['ngGeolocation', 'uiGmapgoogle-maps'])
 
 
 
+
 //angular google map
 .controller('mapCtrl', function ($scope, uiGmapGoogleMapApi) {
-
+    $scope.map = {
+        center: {
+            latitude: 45,
+            longitude: -73
+        },
+        zoom: 8
+    };
 
     uiGmapGoogleMapApi.then(function (maps) {
-        $scope.map = {
-            center: {
-                latitude: 45,
-                longitude: -73
-            },
-            zoom: 8
-        };
+
     });
 })
